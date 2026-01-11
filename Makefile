@@ -61,8 +61,8 @@
 # By default, this code compiles 'test_fndsa' (a test framework to validate
 # that all computations are correct) and 'speed_fndsa' (speed benchmarks).
 
-CC = clang
-CFLAGS = -W -Wextra -Wundef -Wshadow -O2
+CC ?= clang
+CFLAGS = -W -Wextra -Wundef -Wshadow -O2 $(EXTRA_CFLAGS)
 LD = clang
 LDFLAGS =
 LIBS =
